@@ -1,0 +1,49 @@
+.cont {
+	width: 30vw;
+	height: 80vh;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	min-width: 200px;
+	min-height: 300px;
+	transform: translate(-50%, -60%);
+	border-radius: 5px;
+}
+	
+@media only screen and (max-width: 450px;) {
+
+	.cont {
+		width: 30vw;
+		height: 80vh;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		min-width: 200px;
+		min-height: 300px;
+		transform: translate(-50%, -60%);
+		border-radius: 5px;
+	}
+}
+
+.circle_image {
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	cursor: pointer;
+}
+
+.circle_image_left {
+	float: left;
+}
+
+.overflow_auto {
+	overflow: auto;
+}
+
+.circle_image_right {
+	float: right;
+}
+
+.name_text {
+	color: #FAFAFA;
+}
