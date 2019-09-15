@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import logo from './logo.svg';
-import Api from './utils/api';
 import './App.css';
 
 /*
@@ -27,6 +25,10 @@ class Index extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      token: ""
+    };
+
     this.validateToken = this.validateToken.bind(this);
   }
 
@@ -39,7 +41,7 @@ class Index extends Component {
     const isTokenValid = this.validateToken(token);
     return (
       <div>
-        {!isTokenValid ? ( 
+        {!isTokenValid ? (
           <Redirect to="/login" />
         ) : (
           <Redirect to="/about" />

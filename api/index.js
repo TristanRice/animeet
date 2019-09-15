@@ -1,8 +1,9 @@
-const express  = require("express")
-    , path     = require("path")
-    , mongoose = require("mongoose")
-    , routes   = require("./routes")
-		, parser   = require("body-parser");
+const express    = require("express")
+    , path       = require("path")
+    , mongoose   = require("mongoose")
+    , routes     = require("./routes")
+    , cors       = require("cors")
+		, parser     = require("body-parser");
 
 require("./passport");
 
@@ -10,11 +11,14 @@ const app  = express( );
 
 app.use(express.static(path.resolve(__dirname, "static")));
 
+app.use(cors());
+
 app.use(parser.json());
 
 app.use("/api", routes);
 
-const port = process.env.port || 8000;
+//lol
+const port = 8000 || process.env.port || 8000;
 
 const prod = process.env.NODE_ENV === "production";
 

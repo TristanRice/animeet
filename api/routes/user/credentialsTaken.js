@@ -1,13 +1,14 @@
-const express = require("express");
-    , User    = require("../../models/user");
-router = express.Router( );
+const express = require("express")
+    , User    = require("../../models/user")
+    , router = express.Router( );
 
 /*
 /api/user/{username}/exists
 /api/user/{email}/exists
 */
 
-router.get("/:credentialType/isTaken", function(req, res) {
+router.get("/:credentialType/:value/isTaken", function(req, res) {
+  console.log("her");
   const type  = req.params.credentialType;
   const value = req.params.value;
   User.findOne({type: value}, function(err, user) {

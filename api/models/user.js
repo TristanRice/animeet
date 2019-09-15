@@ -10,20 +10,22 @@ const User = new mongoose.Schema({
 		dark_mode: Boolean,
 		dull_mode: Boolean
 	},
-	fav_anime: {
-		name: String,
-		image: String
+	fav_animes: {
+		{
+			name: String,
+		}
 	},
 	biography: String,
 	profile_picture: String,
 	gender: String,
+	date_of_birth: String,
 	sexual_preferences: {
 		//true for each one that they want to date
 		men: Boolean,
 		women: Boolean,
 		non_binary: Boolean
 	}
-	
+
 }, {timestamps: true});
 
 User.methods.hash_password = function( ) {
