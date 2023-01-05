@@ -11,7 +11,7 @@
     "react-fontawesome": "^1.6.1",
     "react-materialize": "^3.3.5",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "0.9.5"
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {},
   "scripts": {
